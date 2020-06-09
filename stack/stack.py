@@ -81,7 +81,7 @@ class HashyNode:
         """
         return hl.md5(self.dataval).hexdigest()
 
-    def addNode(self, node: HashyNode):
+    def addNode(self, ):
         self.nextval = node
         self.nextval.lasthash = self.generate_hash()
         self.nexthash = self.nextval.generate_hash()
@@ -100,20 +100,20 @@ class LinkedListStack:
         self.originNode.lastval = "Origin"
 
 
-
-DBG = True
-if DBG:
-    print("making linked list object")
-list1 = LinkedListStack()
-list1.originNode = HashyNode("Mon")
-if DBG:
-    print("Setting headval of LL1 to Node('Mon')")
-e2 = HashyNode("Tue")
-e3 = HashyNode("Wed")
-print("making nodes e2=Node('Tue') and e3=Node('Wed')")
-print("Link first Node to second node")
-# Link first Node to second node
-list1.headval.nextval = e2
-print("link second node to thrid node")
-# Link second Node to third node
-e2.nextval = e3
+if __name__ == "__main__":
+    DBG = True
+    if DBG:
+        print("making linked list object")
+    list1 = LinkedListStack()
+    list1.originNode = HashyNode("Mon")
+    if DBG:
+        print("Setting headval of LL1 to Node('Mon')")
+    e2 = HashyNode("Tue")
+    e3 = HashyNode("Wed")
+    print("making nodes e2=Node('Tue') and e3=Node('Wed')")
+    print("Link first Node to second node")
+    # Link first Node to second node
+    list1.headval.nextval = e2
+    print("link second node to thrid node")
+    # Link second Node to third node
+    e2.nextval = e3
