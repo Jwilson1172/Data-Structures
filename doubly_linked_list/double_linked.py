@@ -183,7 +183,7 @@ def main() -> bool:
             # add a deposit transaction as the first node to the list
             d=dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": f"{datetime.date()}",
                     "trans_type": "depo",
                     "from_acc": 2,
                     "to_acc": 2,
@@ -196,7 +196,7 @@ def main() -> bool:
             # add a transfer as the next node in the list
             d=dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "xfer",
                     "from_acc": 3,
                     "to_acc": 22,
@@ -209,7 +209,7 @@ def main() -> bool:
             # add a withdrawl transaction
             d=dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "wthd",
                     "from_acc": 15,
                     "to_acc": 15,
@@ -223,7 +223,7 @@ def main() -> bool:
             # add a wiretransfer transaction
             d=dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "wire",
                     "from_acc": 2,
                     "to_acc": 1156,
@@ -247,7 +247,7 @@ def main() -> bool:
         myList.remove(
             dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "wire",
                     "from_acc": 2,
                     "to_acc": 1156,
@@ -263,7 +263,7 @@ def main() -> bool:
         myList.add(
             d=dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "deposit",
                     "from_acc": 2,
                     "to_acc": 2,
@@ -277,7 +277,7 @@ def main() -> bool:
         myList.remove(
             dict(
                 {
-                    "date": datetime.datetime(),
+                    "date": datetime.date(),
                     "trans_type": "wthd",
                     "from_acc": 15,
                     "to_acc": 15,
@@ -296,5 +296,4 @@ def main() -> bool:
 
 
 if __name__ == "__main__":
-
     main()
