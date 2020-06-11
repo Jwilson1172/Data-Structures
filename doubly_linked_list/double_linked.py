@@ -174,9 +174,7 @@ class DoublyLinkedList(object):
 def main() -> bool:
     try:
         myList = DoublyLinkedList()
-        print(
-            "Example of using a doubly linked list as a transaction record storage backend"
-        )
+        print("Example of using a doubly linked list")
         # making a structer of nodes that hold dictonary objects
         # the dictionary objects are transactions at a finacial institution
         myList.add(

@@ -47,8 +47,10 @@ class Queue:
         self.size = self.size - 1
 
         print(f"size after: {self.size}")
-
-        value = self.storage.pop()
+        if self.size == 0:
+            return None
+        else:
+            value = self.storage.pop(0)
 
         print(f"Value that was popped: {value}")
         return value
@@ -61,6 +63,6 @@ if __name__ == "__main__":
     q.enqueue(3)
     q.enqueue(1)
     print(f"PRINTING QUEUE:\n{q}\nREMOVING QUEUED ITEMS")
-    q.dequeue()
+    assert q.dequeue() == 1
     q.dequeue()
     q.dequeue()
